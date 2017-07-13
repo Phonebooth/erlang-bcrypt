@@ -6,6 +6,8 @@ priv/bcrypt
 priv/bcrypt_nif.so
 logs/*
 .eunit
+.rebar
+compile_commands.json
 
 ## libtool
 .deps
