@@ -1,6 +1,9 @@
 erlang-bcrypt
 =============
 
+.. image:: https://travis-ci.org/smarkets/erlang-bcrypt.svg?branch=master
+    :target: https://travis-ci.org/smarkets/erlang-bcrypt
+
 erlang-bcrypt is a wrapper around the OpenBSD Blowfish password hashing
 algorithm, as described in `"A Future-Adaptable Password Scheme"`_ by Niels
 Provos and David Mazieres.
@@ -24,9 +27,9 @@ Basic usage instructions
 
 3. Hash a password using a salt with the default number of rounds::
 
-        1> {ok, Salt} = bcrypt:gen_salt(),
+        1> {ok, Salt} = bcrypt:gen_salt().
         {ok,"$2a$12$sSS8Eg.ovVzaHzi1nUHYK."}
-        2> {ok, Hash} = bcrypt:hashpw("foo", Salt),
+        2> {ok, Hash} = bcrypt:hashpw("foo", Salt).
         {ok,"$2a$12$sSS8Eg.ovVzaHzi1nUHYK.HbUIOdlQI0iS22Q5rd5z.JVVYH6sfm6"}
 
 3. Verify the password::
